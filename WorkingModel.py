@@ -39,7 +39,7 @@ swapper = insightface.model_zoo.get_model("/home/sethupathy/.insightface/models/
 sourcef = facesScr[0]
 
 #copying
-res = morgan.copy()
+res = frame.copy()
 #iterating through every face in the frame swap it with the user
 for f in facesDest:
     res = swapper.get(res,f,sourcef,paste_back = True)
