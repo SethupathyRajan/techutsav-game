@@ -1,0 +1,74 @@
+/* matrix.css */
+
+body {
+    background: #000;
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+  }
+  
+  .matrix-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 2;
+  }
+  
+  .matrix-text {
+    color: #0f0;
+    font-size: 120px; /* Increased text size */
+    font-family: monospace;
+    position: relative;
+    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+    z-index: 2;
+  }
+  
+  .matrix-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: glitch 2s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    transform: translate(-2px, -2px);
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0, 0 0 15px #0f0;
+  }
+  
+  .rain {
+    display: none; /* Removed green bar effect */
+  }
+  
+  @keyframes glitch {
+    0%, 100% {
+      clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+      transform: translate(0);
+    }
+    33% {
+      clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%);
+      transform: translate(-5px, -5px);
+    }
+    66% {
+      clip-path: polygon(0 85%, 100% 85%, 100% 100%, 0 100%);
+      transform: translate(5px, 5px);
+    }
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3; /* 👈 Adjust how dim it gets */
+    }
+
+  }  
+
+.blinking {
+  animation: blink 2s infinite;
+}
