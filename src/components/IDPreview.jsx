@@ -233,7 +233,8 @@ const IDPreview = ({ data, img, frame, handleNext }) => {
           src={finalImage} 
           alt="ID Preview" 
           style={{
-            maxWidth: "100%", 
+            maxWidth: "450px", 
+            maxHeight: "450px",
             border: "3px solid #0f0", 
             borderRadius: "12px",
             boxShadow: "0px 0px 10px #0f0"
@@ -249,7 +250,7 @@ const IDPreview = ({ data, img, frame, handleNext }) => {
           display: "flex", 
           flexDirection: "column", 
           alignItems: "center", 
-          width: "100%", 
+          width: "450px", 
           maxWidth: 400, 
           mt: 2 
         }}
