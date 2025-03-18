@@ -5,5 +5,10 @@ dist-ssr
 .env
 .vscode/*
 !.vscode/extensions.json
+<<<<<<< HEAD
 /venv
 /env
+=======
+venv/
+env/
+>>>>>>> 9a3cc465 (UI Changes + addded rerquirements.txt)

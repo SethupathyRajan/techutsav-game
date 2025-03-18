@@ -121,7 +121,8 @@ const IDPreview = ({ data, img, frame, handleNext }) => {
           src={finalImage}
           alt="ID Preview"
           style={{
-            maxWidth: "100%",
+            maxWidth: "40%",
+            maxHeight :"40%",
             border: "3px solid #0f0",
             borderRadius: "12px",
             boxShadow: "0px 0px 10px #0f0",
