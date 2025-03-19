@@ -87,8 +87,8 @@ app.post("/send-email", (req, res) => {
   const mailOptions = {
     from: process.env.EMAIL,
     to: to_email,
-    subject: "Your Swapped Image",
-    html: "<p>Here is your swapped image.</p>",
+    subject: "Your Image",
+    html: "<p>Thank you for using our project</p>",
     attachments: [
       {
         filename: "swapped_image.png",

@@ -19,7 +19,11 @@ const WebcamCapture = ({ onCapture, selectedCharacter ,handleBack }) => {
     "Kratos": "/assets/1.png",
     "Arthur Morgan": "/assets/2.png",
     "Ellie": "/assets/3.png",
-    "Lara Croft": "/assets/4.png"
+    "Lara Croft": "/assets/4.png",
+    "Agent 47":"/assets/5.png",
+    "Jill Valentine":"/assets/6.png",
+    "Johnny Cage":"/assets/7.png",
+    "Evie fyre":"/assets/8.png"
   };
   
 

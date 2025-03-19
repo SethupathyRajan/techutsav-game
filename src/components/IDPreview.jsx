@@ -2,14 +2,19 @@ import React, { useState, useEffect } from "react";
 import { Box, Typography, Button, TextField, CircularProgress } from "@mui/material";
 import axios from "axios";
 import missionPassedSound from "../assets/mission_passed.mp3";
+import { useRef } from "react";
 
-const IDPreview = ({ data, img, frame, handleNext }) => {
+
+
+
+const IDPreview = ({ data, img, frame, handleNext ,handleBack}) => {
   const [finalCaptureImage, setFinalCapturedImage] = useState(null);
   const [finalFrameImage, setFinalFrameImage] = useState(null);
   const [finalImage, setFinalImage] = useState(null);
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(true);
   const [showMissionPassed, setShowMissionPassed] = useState(false);
+  const audioRef = useRef(null);
 
   useEffect(() => {
     if (!img || !frame) return;
@@ -57,10 +62,16 @@ const IDPreview = ({ data, img, frame, handleNext }) => {
   useEffect(() => {
     if (showMissionPassed) {
       const audio = new Audio(missionPassedSound);
-      audio.play();
-      setTimeout(() => handleNext(), 2000);
+  
+      audioRef.current?.pause();
+      audioRef.current = audio;
+  
+      audio.currentTime = 0;
+      audio.play().catch(error => console.error("Audio playback failed:", error));
+  
+      setTimeout(() => handleNext(), 0);
     }
-  }, [showMissionPassed, handleNext]);
+  }, [showMissionPassed]);
 
   const fetchSwappedFace = async () => {
     try {
@@ -180,6 +191,11 @@ const IDPreview = ({ data, img, frame, handleNext }) => {
           Send
         </Button>
       </Box>
+       <Box sx={{ position: "fixed", bottom: 20, left: 20 }}>
+              <Button variant="text" onClick={handleBack} sx={{ color: "#d500f9", fontSize: "1.2rem", textTransform: "none" }}>
+                ← Back
+              </Button>
+            </Box>
     </Box>
   );
 };

@@ -11,6 +11,10 @@ import frameKratos from "../assets/1.png";
 import frameArthur from "../assets/2.png";
 import frameEllie from "../assets/3.png";
 import frameLara from "../assets/4.png";
+import frame47 from "../assets/5.png";
+import framejill from "../assets/6.png";
+import framejc from "../assets/7.png";
+import frameEf from "../assets/8.png"
 import defaultFrame from "../assets/Idframe.png";
 
 const stepTexts = [
@@ -24,7 +28,11 @@ const characterFrames = {
   "Kratos": frameKratos,
   "Arthur Morgan": frameArthur,
   "Ellie": frameEllie,
-  "Lara Croft": frameLara
+  "Lara Croft": frameLara,
+  "Agent 47": frame47,
+  "Jill Valentine":framejill,
+  "Johnny Cage":framejc,
+  "Evie frye":frameEf
 };
 
 const App = () => {
@@ -141,7 +149,7 @@ const App = () => {
           ) : activeStep === 2 ? (
             <WebcamCapture onCapture={handleImageCapture} character={formData.character} handleBack={handleBack}/>
           ) : activeStep === 3 ? (
-            <IDPreview data={formData} img={capturedImage} frame={formData.frame} handleNext={handleNext}/>
+            <IDPreview data={formData} img={capturedImage} frame={formData.frame} handleNext={handleNext} handleBack={handleBack}/>
           ) : activeStep === 4 ? (
             <Box
             sx={{

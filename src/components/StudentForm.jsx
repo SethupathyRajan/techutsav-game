@@ -57,6 +57,20 @@ const StudentForm = ({ handleFormSubmit, handleBack }) => {
                       </CardContent>
                     </CardActionArea>
                   </Card>
+                  <Card sx={{ bgcolor: "rgba(0, 0, 0, 0.3)", color: "#0f0", width: 240, border: "2px solid #0f0", boxShadow: "0 0 15px #0f0" }}>
+                    <CardActionArea onClick={() => handleCharacterSelection("Agent 47")}> 
+                      <CardContent>
+                        <Typography variant="h5">Agent 47 - Hitman</Typography>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                  <Card sx={{ bgcolor: "rgba(0, 0, 0, 0.3)", color: "#0f0", width: 240, border: "2px solid #0f0", boxShadow: "0 0 15px #0f0" }}>
+                    <CardActionArea onClick={() => handleCharacterSelection("Johnny Cage")}> 
+                      <CardContent>
+                        <Typography variant="h5">Johnny Cage - Mortal Kombat</Typography>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
                 </>
               ) : (
                 <>
@@ -71,6 +85,20 @@ const StudentForm = ({ handleFormSubmit, handleBack }) => {
                     <CardActionArea onClick={() => handleCharacterSelection("Lara Croft")}> 
                       <CardContent>
                         <Typography variant="h5">Lara Croft - Tomb Raider</Typography>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                  <Card sx={{ bgcolor: "rgba(0, 0, 0, 0.3)", color: "#0f0", width: 240, border: "2px solid #0f0", boxShadow: "0 0 15px #0f0" }}>
+                    <CardActionArea onClick={() => handleCharacterSelection("Jill Valentine")}> 
+                      <CardContent>
+                        <Typography variant="h5">Jill Valentine - Resident Evil</Typography>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                  <Card sx={{ bgcolor: "rgba(0, 0, 0, 0.3)", color: "#0f0", width: 240, border: "2px solid #0f0", boxShadow: "0 0 15px #0f0" }}>
+                    <CardActionArea onClick={() => handleCharacterSelection("Evie frye")}> 
+                      <CardContent>
+                        <Typography variant="h5">Evie Frye- Assassin's Creed Syndicate</Typography>
                       </CardContent>
                     </CardActionArea>
                   </Card>
