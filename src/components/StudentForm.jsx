@@ -4,10 +4,13 @@ import kratos from "../assets/1.png";
 import Lara from "../assets/4.png";
 import arthur from "../assets/2.png";
 import ellie from "../assets/3.png";
+<<<<<<< HEAD
 import agent47 from "../assets/5.png";
 import jc from "../assets/7.png";
 import jill from "../assets/6.png";
 import evie from "../assets/8.png";
+=======
+>>>>>>> ebed995e4f646d2a63cd62b8d3bf98180aaa2ce4
 
 const StudentForm = ({ handleFormSubmit, handleBack }) => {
   const [selectedGender, setSelectedGender] = useState("");
@@ -24,15 +27,45 @@ const StudentForm = ({ handleFormSubmit, handleBack }) => {
         ? [
             { name: "Kratos", img: kratos },
             { name: "Arthur Morgan", img: arthur },
+<<<<<<< HEAD
             { name: "Agent 47", img: agent47 },
             { name: "Johnny Cage", img: jc }
             
+=======
+            { name: "Arthur Morgan", img: arthur },
+            { name: "Arthur Morgan", img: arthur },
+            { name: "Arthur Morgan", img: arthur },
+            { name: "Arthur Morgan", img: arthur },
+            { name: "Arthur Morgan", img: arthur },
+            { name: "Arthur Morgan", img: arthur },
+            { name: "Arthur Morgan", img: arthur },
+            { name: "Arthur Morgan", img: arthur },
+            { name: "Arthur Morgan", img: arthur },
+            { name: "Arthur Morgan", img: arthur },
+            { name: "Arthur Morgan", img: arthur },
+            { name: "Arthur Morgan", img: arthur },
+            { name: "Arthur Morgan", img: arthur },
+            { name: "Arthur Morgan", img: arthur },
+            { name: "Arthur Morgan", img: arthur },
+            { name: "Arthur Morgan", img: arthur },
+>>>>>>> ebed995e4f646d2a63cd62b8d3bf98180aaa2ce4
           ]
         : [
             { name: "Ellie", img: ellie },
             { name: "Lara Croft", img: Lara },
+<<<<<<< HEAD
             { name: "Jill Valentine", img: jill},
             { name: "Evie Frye", img: evie }
+=======
+            { name: "Lara Croft", img: Lara },
+            { name: "Lara Croft", img: Lara },
+            { name: "Lara Croft", img: Lara },
+            { name: "Lara Croft", img: Lara },
+            { name: "Lara Croft", img: Lara },
+            { name: "Lara Croft", img: Lara },
+            { name: "Lara Croft", img: Lara },
+            { name: "Lara Croft", img: Lara }
+>>>>>>> ebed995e4f646d2a63cd62b8d3bf98180aaa2ce4
           ]
     );
   };
