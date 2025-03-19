@@ -23,3 +23,6 @@
   flex-direction: column;
   align-items: center;
 }
+html {
+  overflow: auto !important;
+}
